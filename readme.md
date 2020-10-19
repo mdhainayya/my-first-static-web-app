@@ -1,3 +1,3 @@
-# Vanilla JavaScript App
+# UTS TST Madiha
 
-This repo is used as a starter for a _very basic_ HTML web application using no front-end frameworks.
+Repositori ini berisi file yang menunjang pengerjaan UTS TST dengan deskripsi deploy serverless web yang melakukan posting ke database.
