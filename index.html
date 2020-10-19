@@ -9,34 +9,8 @@
 </head>
 
 <body>
-  <main>
-    <h1>UTS TST Madiha</h1>
-  </main>
-  <form action ="process.php" method="POST">
-    <fieldset>
-    <legend>Masukkan Nama</legend>
-    <p>
-      <label>Nama depan:</label>
-      <input type="text" name="namadepan" placeholder="Nama depan..."/>
-    </p>
-    <p>
-      <label>Nama belakang:</label>
-      <input type="text" name="namabelakang" placeholder="Nama depan..."/>
-    </p>
-    <p>
-      <input type="submit" name="submit" value="Submit" />
-    </p>
-    </fieldset>
-  </form>
-
-  <p><b id="name">...</b></p>
-
-  <script>
-    (async function() {
-      let { text } = await( await fetch('https://madiha.azurewebsites.net/api/message?')).json();
-      document.querySelector('#name').textContent = text;
-    }())
-  </script>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
 </body>
 
 </html>
