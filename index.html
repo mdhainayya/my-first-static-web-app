@@ -27,9 +27,12 @@
   </form>
   <button>Submit</button>
 
+  <p>Loading content from the API: <b id="name">...</b></p>
+
   <script>
     (async function() {
-      let { text } = await("https://madiha.azurewebsites.net/api/message?").textContent = text;
+      let { text } = await( await fetch("https://madiha.azurewebsites.net/api/message")).json();
+      document.querySelector('#name').textContent = text;
     }())
   </script>
 </body>
