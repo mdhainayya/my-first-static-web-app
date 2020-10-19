@@ -9,8 +9,34 @@
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
-  <div id="root"></div>
+  <main>
+    <h1>UTS TST Madiha</h1>
+  </main>
+  <form action ="" method="POST">
+    <fieldset>
+    <legend>Masukkan Nama</legend>
+    <p>
+      <label>Nama depan:</label>
+      <input type="text" name="namadepan" placeholder="Nama depan..."/>
+    </p>
+    <p>
+      <label>Nama belakang:</label>
+      <input type="text" name="namabelakang" placeholder="Nama depan..."/>
+    </p>
+    <p>
+      <input type="submit" name="submit" value="Daftar" />
+    </p>
+    </fieldset>
+  </form>
+
+  <p>Loading content from the API: <b id="name">...</b></p>
+
+  <script>
+    (async function() {
+      let { text } = await( await fetch('https://madiha.azurewebsites.net/api/message?')).json();
+      document.querySelector('#name').textContent = text;
+    }())
+  </script>
 </body>
 
 </html>
