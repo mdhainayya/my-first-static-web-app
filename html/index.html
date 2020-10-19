@@ -32,12 +32,6 @@
   <p>Loading content from the API: <b id="name">...</b></p>
 
   <script>
-    function submitMessage(message) {
-      alert(message);
-    }
-  </script>
-
-  <script>
     (async function(namadepan, namabelakang) {
       let { text } = await( await fetch('https://madiha.azurewebsites.net/api/message?')).json();
       document.querySelector('#name').textContent = text;
