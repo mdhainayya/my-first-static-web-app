@@ -24,7 +24,7 @@
       <input type="text" name="namabelakang" placeholder="Nama depan..."/>
     </p>
     <p>
-      <button onclick="submitMessage()">Submit</button>
+      <button onclick="submitMessage(id)">Submit</button>
     </p>
     </fieldset>
   </form>
@@ -32,14 +32,13 @@
   <p>Loading content from the API: <b id="name">...</b></p>
 
   <script>
-    function submitMessage() {
-      id="name";
-      alert(id);
+    function submitMessage(message) {
+      alert(message);
     }
   </script>
 
   <script>
-    (async function() {
+    (async function(namadepan, namabelakang) {
       let { text } = await( await fetch('https://madiha.azurewebsites.net/api/message?')).json();
       document.querySelector('#name').textContent = text;
     }())
